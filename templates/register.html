@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}
+    Register Form
+{% endblock %}
+{% block body %}
+<header class="container-fluid bg-dark text-white">
+    <div class="container">
+        <div class="row" style="height:100vh;">
+            <div class="col-md-6 mx-auto align-self-center">
+                <h1 style="text-align:center;" class="text-success">Register Form</h1>
+                <form method="POST">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% for error in field.errors %}
+                            <p style="color:red;"><strong>{{error}}</strong></p>
+                        {% endfor %}
+                        {{field.label}}
+                        {{field}}
+                    {% endfor %}
+                    <button class="btn-block btn btn-success" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
