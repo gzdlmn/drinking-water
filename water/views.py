@@ -44,7 +44,7 @@ def user_page(request):
             water.user = request.user
             if water.drinking is True:
                 water.save()
-                return redirect("home")
+                return redirect("userpage")
         return render(request, "userpage.html", {"form": form, "today": today, "yesterday":yesterday,
                                                  "before_yesterday": before_yesterday, "two_days_before_yesterday": two_days_before_yesterday,
                                                  "three_days_before_yesterday": three_days_before_yesterday,
