@@ -4,7 +4,7 @@ from . forms import RegisterForm,LoginForm
 from django.contrib import messages
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
-from django.http import HttpResponseRedirect
+
 
 
 
