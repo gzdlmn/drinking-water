@@ -11,4 +11,4 @@ class Water(models.Model):
 
     def glasses(self):
         if self.drinking is True:
-            return '<img src="/media/icons8-sparkling-water-48.png"/>'.format(self.drinking)
+            return '<img src="/media/icons8-sparkling-water-24.png"/>'.format(self.drinking)

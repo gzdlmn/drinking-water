@@ -35,7 +35,7 @@ def loginUser(request):
             return render(request, "login.html", {"form":form})
         login(request,user)
         messages.info(request, "You logged successfully")
-        return redirect("home")
+        return redirect("userpage")
     return render(request, "login.html", {"form":form})
 
 def logoutUser(request):

@@ -5,13 +5,13 @@
 {% block body %}
     <header class="container-fluid userpage m-0 px-0 py-5 bg-dark text-white" style="overflow:hidden;">
         <div class="row">
-            <div class="col-md-6 mx-auto mt-5">
-                <h1 class="text-center text-success">{{today}}</h1>
+            <div class="col-md-6 mx-auto mt-4">
+                <h3 class="text-center text-success">{{today}}</h3>
                 <form method="POST">
                     {% csrf_token %}
                     <div class="row" style="height: 100px;">
                         <div class="col-6 align-self-center">
-                            <input type="checkbox" name="drinking" class="d-block form-control">
+                            <input type="checkbox" name="drinking" class="form-control">
                         </div>
                         <div class="col-6 align-self-center">
                             <button type="submit" class="btn btn-success d-block w-75 mx-auto"><i class="fas fa-plus"></i></button>
@@ -21,9 +21,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 mx-auto text-center mt-5">
-                <h3 class="text-center text-success px-2">How many glasses of water did you drink?</h3>
-                <h3 class="text-success">Last five days</h3>
+            <div class="col-md-6 mx-auto text-center mt-1 mt-lg-5">
+                <h4 class="text-center text-success px-2">How many glasses of water did you drink?</h4>
+                <h5 class="text-danger">Last five days</h5>
                 <div class="d-flex justify-content-center">
                     <!-- for three days before yesterday -->
                     <div class="col-2">
@@ -98,12 +98,13 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-5">
+        <div class="row">
             <div class="col-10 col-md-6 mx-auto">
                 <canvas id="myChart"></canvas>
             </div>
         </div>
     </header>
+
     <script>
             var ctx = document.getElementById('myChart').getContext('2d');
             var myChart = new Chart(ctx, {

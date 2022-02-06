@@ -14,10 +14,11 @@
         <link rel="stylesheet" type="text/css" href=" {% static '/css/style.css' %} ">
         <!-- chart.js-->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <title>{% block title %}{% endblock %}</title>
+        <title>{% block title %}Drinking Water{% endblock %}</title>
     </head>
-    <body>
+    <body class="bg-dark">
         {% include 'includes/navbar.html' %}
+        {% include 'includes/messages.html' %}
         {% block body %}
         {% endblock %}
         <!-- Option 2: jQuery, Popper.js, and Bootstrap JS-->
